@@ -6,7 +6,8 @@ h1,
 h2,
 h3,
 p,
-ul {
+ul,
+li {
   margin: 0;
   padding: 0;
 }
@@ -44,6 +45,8 @@ button {
   --color-accent: #2196f3;
   --color-bold: #212121;
   --color-main: #757575;
+
+  --color-icon: #afb1b8;
 
   --color-black: #000000;
   --color-white: #ffffff;
@@ -142,12 +145,7 @@ body {
 .header-contact-email-icon,
 .header-contact-tel-icon {
   margin-right: 10px;
-  fill: var(--color-main);
-  cursor: pointer;
-}
-.header-contact-email-icon:hover,
-.header-contact-tel-icon:hover {
-  fill: var(--color-accent);
+  fill: currentColor;
 }
 
 .team-img,
@@ -271,6 +269,7 @@ body {
 }
 
 .team-description {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: calc(19 / 16);
 }
@@ -283,10 +282,102 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
+.team-links,
+.footer-links {
+  display: flex;
+  justify-content: center;
+}
+.team-link,
+.footer-link {
+  width: 40px;
+  height: 40px;
+}
+.team-link a:hover,
+.team-link a:focus,
+.footer-link a:hover,
+.footer-link a:focus {
+  color: var(--color-white);
+  background-color: var(--color-accent);
+}
+.team-link a,
+.footer-link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  width: 100%;
+  height: 100%;
+}
+.team-link a {
+  color: var(--color-icon);
+}
+.team-link-vector,
+.footer-link-vector {
+  fill: currentColor;
+}
+.team-link:not(:last-child),
+.footer-link:not(:last-child) {
+  margin-right: 10px;
+}
+
+/* Clients */
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+}
+.clients-item {
+  width: 170px;
+  height: 92px;
+}
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  color: var(--color-icon);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--color-icon);
+  border-radius: 4px;
+}
+.clients-item a:hover,
+.clients-item a:focus {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+.clients-item-vector {
+  fill: currentColor;
+}
+
 /* Footer */
 .footer {
   background-color: var(--color-bgr-dark);
   padding: 60px 0;
+}
+.footer-wrap {
+  display: flex;
+}
+.footer-address-wrap {
+  margin-right: 70px;
+}
+.footer-link-text {
+  display: inline-block;
+  margin-bottom: 20px;
+  line-height: calc(24 / 14);
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+.footer-link a {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
 }
 
 .footer-logo {
