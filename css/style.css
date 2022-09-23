@@ -168,8 +168,9 @@ body {
 
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero-bg.jpg);
-  background-size: cover cover;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero-title {
@@ -214,7 +215,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
   height: 120px;
   margin-bottom: 30px;
   background-color: var(--color-bgr-grey);
@@ -289,8 +289,8 @@ body {
 }
 .team-link,
 .footer-link {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
 }
 .team-link a:hover,
 .team-link a:focus,
@@ -364,6 +364,7 @@ body {
 }
 .footer-wrap {
   display: flex;
+  align-items: baseline;
 }
 .footer-address-wrap {
   margin-right: 70px;
@@ -446,6 +447,11 @@ body {
 .portfolio-item {
   flex-basis: calc((100% - 90px) / 3);
   margin: 15px;
+}
+
+.portfolio-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-list-title {
   margin-bottom: 4px;
